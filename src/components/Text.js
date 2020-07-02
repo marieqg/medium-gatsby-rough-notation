@@ -3,177 +3,106 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation"
 import styled from "styled-components"
 
 const Text = () => {
-  const text = "Lorem ipsum"
   const multiline = false
   const color = "purple"
-  const show = true
-  const animationDelay = 1
+  const animationDelay = "1000"
   const animationDuration = 1000
 
   return (
     <MainDiv>
-      <RoughNotationDiv>
-        <StyledDiv>
-          <Title> Highlight</Title>
-          <p>
-            <RoughNotation
-              type="highlight"
-              show={show}
-              color={color}
-              multiline={multiline}
-              animationDelay={animationDelay}
-              animationDuration={animationDuration}
-            >
-              {text}
-            </RoughNotation>
-          </p>
-        </StyledDiv>
-        <StyledDiv>
-          <Title> Underline</Title>
-          <p>
-            <RoughNotation
-              type="underline"
-              show={show}
-              color={color}
-              multiline={multiline}
-              animationDelay={animationDelay}
-              animationDuration={animationDuration}
-            >
-              {text}
-            </RoughNotation>
-          </p>
-        </StyledDiv>
-        <StyledDiv>
-          <Title> Box</Title>
-          <p>
-            <RoughNotation
-              type="box"
-              show={show}
-              color={color}
-              multiline={multiline}
-              animationDelay={animationDelay}
-              animationDuration={animationDuration}
-            >
-              {text}
-            </RoughNotation>
-          </p>
-        </StyledDiv>
-        <StyledDiv>
-          <Title> Strike Through</Title>
-          <p>
-            <RoughNotation
-              type="strike-through"
-              show={show}
-              color={color}
-              multiline={multiline}
-              animationDelay={animationDelay}
-              animationDuration={animationDuration}
-            >
-              {text}
-            </RoughNotation>
-          </p>
-        </StyledDiv>
-        <StyledDiv>
-          <Title> Crossed Off</Title>
-          <p>
-            <RoughNotation
-              type="crossed-off"
-              show={show}
-              color={color}
-              multiline={multiline}
-              animationDelay={animationDelay}
-              animationDuration={animationDuration}
-            >
-              {text}
-            </RoughNotation>
-          </p>
-        </StyledDiv>
-        <StyledDiv>
-          <Title> Circle</Title>
-          <p>
-            <RoughNotation
-              type="circle"
-              show={show}
-              color={color}
-              multiline={multiline}
-              animationDelay={animationDelay}
-              animationDuration={animationDuration}
-            >
-              {text}
-            </RoughNotation>
-          </p>
-        </StyledDiv>
-        <StyledDiv>
-          <Title> Bracket</Title>
-          <p>
-            <RoughNotation
-              type="bracket"
-              show={show}
-              color={color}
-              multiline={multiline}
-              animationDelay={animationDelay}
-              animationDuration={animationDuration}
-            >
-              {text}
-            </RoughNotation>
-          </p>
-        </StyledDiv>
-      </RoughNotationDiv>
+      <RoughNotationGroup show={true}>
+        <RoughNotation
+          type="highlight"
+          color={"yellow"}
+          multiline={multiline}
+          animationDelay={animationDelay}
+          animationDuration={animationDuration}
+        >
+          Lorem ipsum dolor sit amet
+        </RoughNotation>
+        , consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.
+        <RoughNotation
+          type="bracket"
+          color={"darkblue"}
+          animationDelay={2000}
+          animationDuration={animationDuration}
+          brackets={["left", "right"]}
+        >
+          Ut enim ad minim veniam,
+        </RoughNotation>
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in
+        <RoughNotation
+          type="underline"
+          color={"red"}
+          animationDelay={animationDelay}
+          animationDuration={2000}
+        >
+          {" "}
+          culpa qui officia deserunt
+        </RoughNotation>{" "}
+        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+        error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa{" "}
+        <RoughNotation
+          type="box"
+          color={"green"}
+          multiline={false}
+          animationDelay={3000}
+          animationDuration={animationDuration}
+          iterations={"6"}
+        >
+          quae ab illo inventore veritatis
+        </RoughNotation>{" "}
+        et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+        voluptatem quia voluptas{" "}
+        <RoughNotation
+          type="crossed-off"
+          color={"black"}
+          animationDelay={animationDelay}
+          animationDuration={3000}
+        >
+          sit aspernatur aut odit aut fugit, sed qui
+        </RoughNotation>
+        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        Neque porro quisquam est,
+        <RoughNotation
+          type="strike-through"
+          color={color}
+          animationDelay={4000}
+          animationDuration={animationDuration}
+        >
+          qui dolorem ipsum quia dolor sit amet,
+        </RoughNotation>
+        consectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
+        veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+        nisi ut aliquid ex ea commodi
+        <RoughNotation
+          type="circle"
+          color={"lightblue"}
+          multiline={true}
+          animationDelay={animationDelay}
+          animationDuration={4000}
+        >
+          consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+          velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
+          fugiat quo voluptas nulla pariatur?"
+        </RoughNotation>
+      </RoughNotationGroup>
+      <RoughNotationDiv></RoughNotationDiv>
     </MainDiv>
   )
 }
 
 export default Text
 
-const MainDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-`
+const MainDiv = styled.div``
 
 const RoughNotationDiv = styled.div`
   display: flex;
   flex-direction: row;
-`
-
-const StyledDiv = styled.div`
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-`
-
-const Title = styled.p`
-  font-size: 25px;
-  color: #663499;
-  font-weight: 800;
-`
-
-// Form
-
-const FormTitle = styled.p`
-  font-size: 20px;
-  color: #663499;
-  margin: 0px 30px 5px 30px;
-  margin-right: 30px;
-`
-
-const FormDiv = styled.div`
-  widht: 200px;
-  height: 300px;
-  border: 2px solid red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-const InputDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid green;
-`
-const RatioText = styled.p`
-  margin: 0 15px 0 0;
 `
