@@ -6,7 +6,7 @@ How To Animate Text-Decorations with Gatsby.js and Rough Notation</h1>
 
 </p>
 
-[![LinkedInArticle](https://miro.medium.com/max/1400/1*RUMV94N-hdJ0lac3ZDR-rg.jpeg)](https://medium.com/frontend-digest/how-to-automatically-display-your-instagram-feed-on-your-gatsby-js-website-bc5cc324eb9d)
+[![LinkedInArticle](https://miro.medium.com/max/1000/1*a4vvNCCXCSpcfOR4h0vY_g.jpeg)](https://medium.com/frontend-digest/how-to-animate-text-decorations-with-gatsby-js-and-rough-notation-cc349d86603d)
 
 This is a tutorial to help you animate your notations on a Gatsby Website. You can read the all article related to this repository [here](https://medium.com/frontend-digest/how-to-animate-text-decorations-with-gatsby-js-and-rough-notation-cc349d86603).
 
